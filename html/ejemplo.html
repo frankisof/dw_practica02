@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud-Respuesta: Paradigma, Protocolos y Casos Prácticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#protocols">Protocolos</a></li>
+                <li><a href="#formats">Formatos</a></li>
+                <li><a href="#case-study">Caso Práctico</a></li>
+            </ul>
+        </nav>
+        <h1>Solicitud-Respuesta</h1>
+        <p>Protocolos de Comunicación y Formatos de Datos</p>
+    </header>
+
+    <section id="intro">
+        <h2>Introducción</h2>
+        <p>El paradigma de solicitud-respuesta es fundamental en la comunicación entre sistemas distribuidos, donde un cliente envía una solicitud y un servidor responde. Este paradigma es la base de muchas aplicaciones modernas, desde la navegación web hasta la interacción entre microservicios.</p>
+    </section>
+
+    <section id="protocols">
+        <h2>Protocolos de Comunicación</h2>
+        <div class="protocol">
+            <h3>HTTP/HTTPS</h3>
+            <p>El protocolo de transferencia de hipertexto (HTTP) es la base de la comunicación en la web. HTTPS es su versión segura, que utiliza cifrado SSL/TLS.</p>
+        </div>
+        <div class="protocol">
+            <h3>gRPC</h3>
+            <p>gRPC es un framework de RPC que utiliza HTTP/2 para la comunicación y Protobuf para la serialización de datos, ideal para servicios de alto rendimiento.</p>
+        </div>
+        <div class="protocol">
+            <h3>MQTT</h3>
+            <p>MQTT es un protocolo de mensajería ligero, basado en publicación-suscripción, utilizado principalmente en entornos IoT.</p>
+        </div>
+        <!-- Imagen para la sección de Protocolos de Comunicación -->
+        <img src="protocolo.jpg" alt="Protocolos de Comunicación" width="300">
+    </section>
+
+    <section id="formats">
+        <h2>Formatos de Datos</h2>
+        <div class="format">
+            <h3>JSON</h3>
+            <p>JSON (JavaScript Object Notation) es un formato de datos ligero y fácil de leer que se utiliza comúnmente en APIs RESTful.</p>
+        </div>
+        <div class="format">
+            <h3>XML</h3>
+            <p>XML (Extensible Markup Language) es un formato de datos que permite definir estructuras de datos complejas, utilizado en servicios como SOAP.</p>
+        </div>
+        <div class="format">
+            <h3>Protobuf</h3>
+            <p>Protobuf es un formato de datos binario desarrollado por Google, diseñado para ser más eficiente que JSON o XML.</p>
+        </div>
+        <!-- Imagen para la sección de Formatos de Datos -->
+        <img src="json.png" alt="Formatos de Datos" width="300">
+    </section>
+
+    <section id="case-study">
+        <h2>Caso Práctico: API RESTful con JSON</h2>
+        <p>En este caso práctico, exploramos cómo una API RESTful utiliza el paradigma de solicitud-respuesta. Un cliente (por ejemplo, un navegador) realiza una solicitud HTTP GET a una API, que devuelve una respuesta en formato JSON.</p>
+        <div class="example">
+            <h3>Solicitud</h3>
+            <pre>
+GET /api/v1/usuarios HTTP/1.1
+Host: api.ejemplo.com
+Accept: application/json
+            </pre>
+        </div>
+        <div class="example">
+            <h3>Respuesta</h3>
+            <pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "usuarios": [
+    {"id": 1, "nombre": "Juan", "email": "juan@example.com"},
+    {"id": 2, "nombre": "María", "email": "maria@example.com"}
+  ]
+}
+            </pre>
+        </div>
+        <p>Este flujo muestra cómo se maneja la interacción básica entre un cliente y un servidor utilizando protocolos de comunicación (HTTP) y formatos de datos (JSON).</p>
+        <!-- Imagen para la sección de Caso Práctico -->
+        <img src="paradigma.jpg" alt="Caso Práctico" width="300">
+    </section>
+
+    <footer>
+        <p>Melissa</p>
+    </footer>
+</body>
+</html>
